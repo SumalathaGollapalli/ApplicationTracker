@@ -1,0 +1,193 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    min-height:100vh;
+    color:white;
+    padding:20px;
+}
+
+header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+header h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.card{
+    background:white;
+    color:black;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.card span{
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.total{
+    border-left:5px solid #3b82f6;
+}
+
+.applied{
+    border-left:5px solid #f59e0b;
+}
+
+.interview{
+    border-left:5px solid #8b5cf6;
+}
+
+.rejected{
+    border-left:5px solid #ef4444;
+}
+
+.offer{
+    border-left:5px solid #10b981;
+}
+
+.form-section{
+    background:white;
+    color:black;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.form-section h2{
+    margin-bottom:15px;
+}
+
+form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:12px;
+}
+
+input,
+select{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.controls{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.controls input,
+.controls select{
+    flex:1;
+}
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    background:white;
+    color:black;
+    border-radius:15px;
+    overflow:hidden;
+    border-collapse:collapse;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+}
+
+th,
+td{
+    padding:12px;
+    text-align:left;
+    border-bottom:1px solid #ddd;
+}
+
+.status{
+    padding:6px 15px;
+    border-radius:20px;
+    color:white;
+    font-size:.9rem;
+}
+
+.applied-tag{
+    background:#f59e0b;
+}
+
+.interview-tag{
+    background:#8b5cf6;
+}
+
+.rejected-tag{
+    background:#ef4444;
+}
+
+.offer-tag{
+    background:#10b981;
+}
+
+.assessment-tag{
+    background:#0ea5e9;
+}
+
+.ghosted-tag{
+    background:#64748b;
+}
+
+.action-btn{
+    padding:8px 12px;
+    margin:2px;
+}
+
+.edit{
+    background:#10b981;
+}
+
+.delete{
+    background:#ef4444;
+}
+
+a{
+    color:#2563eb;
+}

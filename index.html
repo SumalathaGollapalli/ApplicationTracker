@@ -1,1 +1,123 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Application Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>🚀 Internship Application Tracker</h1>
+        <p>Track all your applications in one place</p>
+    </header>
+
+    <div class="container">
+
+        <div class="stats">
+            <div class="card total">
+                <h3>Total</h3>
+                <span id="totalCount">0</span>
+            </div>
+
+            <div class="card applied">
+                <h3>Applied</h3>
+                <span id="appliedCount">0</span>
+            </div>
+
+            <div class="card interview">
+                <h3>Interview</h3>
+                <span id="interviewCount">0</span>
+            </div>
+
+            <div class="card rejected">
+                <h3>Rejected</h3>
+                <span id="rejectedCount">0</span>
+            </div>
+
+            <div class="card offer">
+                <h3>Offer</h3>
+                <span id="offerCount">0</span>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Add / Edit Application</h2>
+
+            <form id="applicationForm">
+                <input type="hidden" id="editIndex">
+
+                <input type="text" id="category" placeholder="Category (SAP, QA, DevOps, etc.)" required>
+
+                <input type="text" id="company" placeholder="Company Name" required>
+
+                <input type="text" id="location" placeholder="Location" required>
+
+                <input type="text" id="jobTitle" placeholder="Job Title" required>
+
+                <input type="url" id="jobLink" placeholder="Job Link">
+
+                <label>Date Applied</label>
+                <input type="date" id="dateApplied">
+
+                <label>Status Update Date</label>
+                <input type="date" id="statusDate">
+
+                <select id="status">
+                    <option>Applied</option>
+                    <option>Online Assessment</option>
+                    <option>Interview</option>
+                    <option>Rejected</option>
+                    <option>Offer</option>
+                    <option>Ghosted</option>
+                </select>
+
+                <button type="submit">Save Application</button>
+            </form>
+        </div>
+
+        <div class="controls">
+
+            <input type="text"
+                   id="searchInput"
+                   placeholder="🔍 Search company, title, location...">
+
+            <select id="filterStatus">
+                <option value="All">All Statuses</option>
+                <option value="Applied">Applied</option>
+                <option value="Online Assessment">Online Assessment</option>
+                <option value="Interview">Interview</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Offer">Offer</option>
+                <option value="Ghosted">Ghosted</option>
+            </select>
+
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Company</th>
+                        <th>Location</th>
+                        <th>Job Title</th>
+                        <th>Link</th>
+                        <th>Applied</th>
+                        <th>Status Updated</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="applicationsTable"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
